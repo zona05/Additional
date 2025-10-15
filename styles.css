@@ -443,6 +443,69 @@ body {
     color: #86868b;
 }
 
+.theme-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+    margin-top: 20px;
+}
+
+.theme-option {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    padding: 15px;
+    border: 2px solid #e0e0e0;
+    border-radius: 12px;
+    background: white;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.theme-option:hover {
+    border-color: #0012b8;
+    transform: translateY(-2px);
+}
+
+.theme-option.active {
+    border-color: #0012b8;
+    background: #f0f0f0;
+}
+
+.theme-preview {
+    width: 80px;
+    height: 60px;
+    border-radius: 8px;
+    border: 1px solid #ddd;
+}
+
+.light-preview {
+    background: linear-gradient(135deg, #f9f9f9 50%, #0012b8 50%);
+}
+
+.dark-preview {
+    background: linear-gradient(135deg, #1a1a1a 50%, #4d9fff 50%);
+}
+
+.red-preview {
+    background: linear-gradient(135deg, #1a0a0a 50%, #ff4d4d 50%);
+}
+
+.green-preview {
+    background: linear-gradient(135deg, #0a1a0a 50%, #4dff88 50%);
+}
+
+.blue-preview {
+    background: linear-gradient(135deg, #0a0a1a 50%, #4d88ff 50%);
+}
+
+.theme-option span {
+    font-size: 0.9em;
+    font-weight: 500;
+    color: #1d1d1f;
+}
+
 body.dark-mode {
     background: #1a1a1a;
     color: #e0e0e0;
@@ -658,6 +721,715 @@ body.dark-mode #movesCount {
 
 body.dark-mode .about-footer {
     color: #909090;
+}
+
+body.dark-mode .theme-option {
+    background: #2d2d2d;
+    border-color: #404040;
+}
+
+body.dark-mode .theme-option:hover {
+    border-color: #4d9fff;
+}
+
+body.dark-mode .theme-option.active {
+    border-color: #4d9fff;
+    background: #1a1a1a;
+}
+
+body.dark-mode .theme-option span {
+    color: #e0e0e0;
+}
+
+body.red-mode {
+    background: #1a0a0a;
+    color: #e0e0e0;
+}
+
+body.red-mode .header {
+    background: #1a0a0a;
+    border-bottom: 1px solid #3d0000;
+}
+
+body.red-mode .logo {
+    color: #ff4d4d;
+}
+
+body.red-mode .logo:hover {
+    color: #ff6b6b;
+}
+
+body.red-mode .icon-btn {
+    background: #1a0a0a;
+    border-color: #4d0000;
+    color: #e0e0e0;
+}
+
+body.red-mode .icon-btn:hover {
+    border-color: #ff4d4d;
+    color: #ff4d4d;
+}
+
+body.red-mode .games-bar {
+    background: #1a0a0a;
+    border-bottom: 1px solid #3d0000;
+}
+
+body.red-mode .game-tab {
+    background: #1a0a0a;
+    border-color: #3d0000;
+    color: #e0e0e0;
+}
+
+body.red-mode .game-stars {
+    color: #ffffff;
+}
+
+body.red-mode .game-tab.active .game-stars {
+    color: rgb(0, 0, 0);
+}
+
+body.red-mode .game-tab.completed .game-stars {
+    color: rgb(255, 255, 255);
+}
+
+body.red-mode .game-tab:hover {
+    border-color: #ff4d4d;
+}
+
+body.red-mode .game-tab.active {
+    background: #ff4d4d;
+    border-color: #ff4d4d;
+    color: white;
+}
+
+body.red-mode .game-tab.completed {
+    background: #2d1212;
+}
+
+body.red-mode .target-number {
+    color: #ff4d4d;
+}
+
+body.red-mode .number-btn {
+    background: #2d1212;
+    color: #e0e0e0;
+}
+
+body.red-mode .number-btn:hover:not(:disabled) {
+    background: #3d1a1a;
+}
+
+body.red-mode .number-btn.selected {
+    background: #ff4d4d;
+    color: white;
+}
+
+body.red-mode .number-btn.selected:hover {
+    background: #e63939;
+}
+
+body.red-mode .operation-btn {
+    background: #4d0000;
+}
+
+body.red-mode .operation-btn:hover:not(:disabled) {
+    background: #6d0000;
+}
+
+body.red-mode .operation-btn.selected {
+    background: #ff4d4d;
+}
+
+body.red-mode .operation-btn.undo-btn-op {
+    background: #8d2f2f;
+}
+
+body.red-mode .operation-btn.undo-btn-op:hover:not(:disabled) {
+    background: #ad3f3f;
+}
+
+body.red-mode .icon-btn#giveUpBtn {
+    border-color: #ff6b6b;
+    color: #ff6b6b;
+}
+
+body.red-mode .icon-btn#giveUpBtn:hover {
+    background: #ff6b6b;
+    color: white;
+}
+
+body.red-mode .solution-banner {
+    background: #2d1212;
+    border-color: #ff4d4d;
+}
+
+body.red-mode .solution-banner-header {
+    background: #ff4d4d;
+    border-bottom-color: #e63939;
+}
+
+body.red-mode .solution-banner-content {
+    background: #2d1212;
+}
+
+body.red-mode .solution-step {
+    background: #1a0a0a;
+    border-left-color: #ff4d4d;
+    color: #e0e0e0;
+}
+
+body.red-mode .modal {
+    background: rgba(10, 0, 0, 0.85);
+}
+
+body.red-mode .modal-content {
+    background: #2d1212;
+    color: #e0e0e0;
+}
+
+body.red-mode .modal-btn {
+    background: #ff4d4d;
+}
+
+body.red-mode .modal-btn:hover {
+    background: #e63939;
+}
+
+body.red-mode #giveUpConfirmBtn {
+    background: #ff6b6b !important;
+}
+
+body.red-mode #giveUpConfirmBtn:hover {
+    background: #ff5252 !important;
+}
+
+body.red-mode #giveUpCancelBtn {
+    background: #00a383 !important;
+}
+
+body.red-mode #giveUpCancelBtn:hover {
+    background: #008c6f !important;
+}
+
+body.red-mode .close-modal {
+    color: #909090;
+}
+
+body.red-mode .close-modal:hover {
+    color: #e0e0e0;
+}
+
+body.red-mode .stats-item {
+    background: #1a0a0a;
+}
+
+body.red-mode .stats-label {
+    color: #909090;
+}
+
+body.red-mode .stats-value {
+    color: #ff4d4d;
+}
+
+body.red-mode h2 {
+    color: #e0e0e0;
+}
+
+body.red-mode p {
+    color: #c0c0c0;
+}
+
+body.red-mode p strong {
+    color: #e0e0e0;
+}
+
+body.red-mode #movesCount {
+    color: #ff4d4d;
+}
+
+body.red-mode .about-footer {
+    color: #909090;
+}
+
+body.red-mode .theme-option {
+    background: #2d1212;
+    border-color: #4d0000;
+}
+
+body.red-mode .theme-option:hover {
+    border-color: #ff4d4d;
+}
+
+body.red-mode .theme-option.active {
+    border-color: #ff4d4d;
+    background: #1a0a0a;
+}
+
+body.red-mode .theme-option span {
+    color: #e0e0e0;
+}
+
+body.green-mode {
+    background: #0a1a0a;
+    color: #e0e0e0;
+}
+
+body.green-mode .header {
+    background: #0a1a0a;
+    border-bottom: 1px solid #003d00;
+}
+
+body.green-mode .logo {
+    color: #4dff88;
+}
+
+body.green-mode .logo:hover {
+    color: #6bffaa;
+}
+
+body.green-mode .icon-btn {
+    background: #0a1a0a;
+    border-color: #004d00;
+    color: #e0e0e0;
+}
+
+body.green-mode .icon-btn:hover {
+    border-color: #4dff88;
+    color: #4dff88;
+}
+
+body.green-mode .games-bar {
+    background: #0a1a0a;
+    border-bottom: 1px solid #003d00;
+}
+
+body.green-mode .game-tab {
+    background: #0a1a0a;
+    border-color: #003d00;
+    color: #e0e0e0;
+}
+
+body.green-mode .game-stars {
+    color: #ffffff;
+}
+
+body.green-mode .game-tab.active .game-stars {
+    color: rgb(0, 0, 0);
+}
+
+body.green-mode .game-tab.completed .game-stars {
+    color: rgb(255, 255, 255);
+}
+
+body.green-mode .game-tab:hover {
+    border-color: #4dff88;
+}
+
+body.green-mode .game-tab.active {
+    background: #4dff88;
+    border-color: #4dff88;
+    color: rgb(0, 0, 0);
+}
+
+body.green-mode .game-tab.completed {
+    background: #122d12;
+}
+
+body.green-mode .target-number {
+    color: #4dff88;
+}
+
+body.green-mode .number-btn {
+    background: #122d12;
+    color: #e0e0e0;
+}
+
+body.green-mode .number-btn:hover:not(:disabled) {
+    background: #1a3d1a;
+}
+
+body.green-mode .number-btn.selected {
+    background: #4dff88;
+    color: rgb(0, 0, 0);
+}
+
+body.green-mode .number-btn.selected:hover {
+    background: #39e673;
+}
+
+body.green-mode .operation-btn {
+    background: #004d00;
+}
+
+body.green-mode .operation-btn:hover:not(:disabled) {
+    background: #006d00;
+}
+
+body.green-mode .operation-btn.selected {
+    background: #4dff88;
+    color: rgb(0, 0, 0);
+}
+
+body.green-mode .operation-btn.undo-btn-op {
+    background: #2f8d2f;
+}
+
+body.green-mode .operation-btn.undo-btn-op:hover:not(:disabled) {
+    background: #3fad3f;
+}
+
+body.green-mode .icon-btn#giveUpBtn {
+    border-color: #ff6b6b;
+    color: #ff6b6b;
+}
+
+body.green-mode .icon-btn#giveUpBtn:hover {
+    background: #ff6b6b;
+    color: white;
+}
+
+body.green-mode .solution-banner {
+    background: #122d12;
+    border-color: #4dff88;
+}
+
+body.green-mode .solution-banner-header {
+    background: #4dff88;
+    border-bottom-color: #39e673;
+    color: rgb(0, 0, 0);
+}
+
+body.green-mode .solution-banner-content {
+    background: #122d12;
+}
+
+body.green-mode .solution-step {
+    background: #0a1a0a;
+    border-left-color: #4dff88;
+    color: #e0e0e0;
+}
+
+body.green-mode .modal {
+    background: rgba(0, 10, 0, 0.85);
+}
+
+body.green-mode .modal-content {
+    background: #122d12;
+    color: #e0e0e0;
+}
+
+body.green-mode .modal-btn {
+    background: #4dff88;
+    color: rgb(0, 0, 0);
+}
+
+body.green-mode .modal-btn:hover {
+    background: #39e673;
+}
+
+body.green-mode #giveUpConfirmBtn {
+    background: #ff6b6b !important;
+    color: white !important;
+}
+
+body.green-mode #giveUpConfirmBtn:hover {
+    background: #ff5252 !important;
+}
+
+body.green-mode #giveUpCancelBtn {
+    background: #00a383 !important;
+}
+
+body.green-mode #giveUpCancelBtn:hover {
+    background: #008c6f !important;
+}
+
+body.green-mode .close-modal {
+    color: #909090;
+}
+
+body.green-mode .close-modal:hover {
+    color: #e0e0e0;
+}
+
+body.green-mode .stats-item {
+    background: #0a1a0a;
+}
+
+body.green-mode .stats-label {
+    color: #909090;
+}
+
+body.green-mode .stats-value {
+    color: #4dff88;
+}
+
+body.green-mode h2 {
+    color: #e0e0e0;
+}
+
+body.green-mode p {
+    color: #c0c0c0;
+}
+
+body.green-mode p strong {
+    color: #e0e0e0;
+}
+
+body.green-mode #movesCount {
+    color: #4dff88;
+}
+
+body.green-mode .about-footer {
+    color: #909090;
+}
+
+body.green-mode .theme-option {
+    background: #122d12;
+    border-color: #004d00;
+}
+
+body.green-mode .theme-option:hover {
+    border-color: #4dff88;
+}
+
+body.green-mode .theme-option.active {
+    border-color: #4dff88;
+    background: #0a1a0a;
+}
+
+body.green-mode .theme-option span {
+    color: #e0e0e0;
+}
+
+body.blue-mode {
+    background: #0a0a1a;
+    color: #e0e0e0;
+}
+
+body.blue-mode .header {
+    background: #0a0a1a;
+    border-bottom: 1px solid #00003d;
+}
+
+body.blue-mode .logo {
+    color: #4d88ff;
+}
+
+body.blue-mode .logo:hover {
+    color: #6ba0ff;
+}
+
+body.blue-mode .icon-btn {
+    background: #0a0a1a;
+    border-color: #00004d;
+    color: #e0e0e0;
+}
+
+body.blue-mode .icon-btn:hover {
+    border-color: #4d88ff;
+    color: #4d88ff;
+}
+
+body.blue-mode .games-bar {
+    background: #0a0a1a;
+    border-bottom: 1px solid #00003d;
+}
+
+body.blue-mode .game-tab {
+    background: #0a0a1a;
+    border-color: #00003d;
+    color: #e0e0e0;
+}
+
+body.blue-mode .game-stars {
+    color: #ffffff;
+}
+
+body.blue-mode .game-tab.active .game-stars {
+    color: rgb(255, 255, 255);
+}
+
+body.blue-mode .game-tab.completed .game-stars {
+    color: rgb(255, 255, 255);
+}
+
+body.blue-mode .game-tab:hover {
+    border-color: #4d88ff;
+}
+
+body.blue-mode .game-tab.active {
+    background: #4d88ff;
+    border-color: #4d88ff;
+    color: white;
+}
+
+body.blue-mode .game-tab.completed {
+    background: #12122d;
+}
+
+body.blue-mode .target-number {
+    color: #4d88ff;
+}
+
+body.blue-mode .number-btn {
+    background: #12122d;
+    color: #e0e0e0;
+}
+
+body.blue-mode .number-btn:hover:not(:disabled) {
+    background: #1a1a3d;
+}
+
+body.blue-mode .number-btn.selected {
+    background: #4d88ff;
+    color: white;
+}
+
+body.blue-mode .number-btn.selected:hover {
+    background: #3970e6;
+}
+
+body.blue-mode .operation-btn {
+    background: #00004d;
+}
+
+body.blue-mode .operation-btn:hover:not(:disabled) {
+    background: #00006d;
+}
+
+body.blue-mode .operation-btn.selected {
+    background: #4d88ff;
+}
+
+body.blue-mode .operation-btn.undo-btn-op {
+    background: #2f2f8d;
+}
+
+body.blue-mode .operation-btn.undo-btn-op:hover:not(:disabled) {
+    background: #3f3fad;
+}
+
+body.blue-mode .icon-btn#giveUpBtn {
+    border-color: #ff6b6b;
+    color: #ff6b6b;
+}
+
+body.blue-mode .icon-btn#giveUpBtn:hover {
+    background: #ff6b6b;
+    color: white;
+}
+
+body.blue-mode .solution-banner {
+    background: #12122d;
+    border-color: #4d88ff;
+}
+
+body.blue-mode .solution-banner-header {
+    background: #4d88ff;
+    border-bottom-color: #3970e6;
+}
+
+body.blue-mode .solution-banner-content {
+    background: #12122d;
+}
+
+body.blue-mode .solution-step {
+    background: #0a0a1a;
+    border-left-color: #4d88ff;
+    color: #e0e0e0;
+}
+
+body.blue-mode .modal {
+    background: rgba(0, 0, 10, 0.85);
+}
+
+body.blue-mode .modal-content {
+    background: #12122d;
+    color: #e0e0e0;
+}
+
+body.blue-mode .modal-btn {
+    background: #4d88ff;
+}
+
+body.blue-mode .modal-btn:hover {
+    background: #3970e6;
+}
+
+body.blue-mode #giveUpConfirmBtn {
+    background: #ff6b6b !important;
+}
+
+body.blue-mode #giveUpConfirmBtn:hover {
+    background: #ff5252 !important;
+}
+
+body.blue-mode #giveUpCancelBtn {
+    background: #00a383 !important;
+}
+
+body.blue-mode #giveUpCancelBtn:hover {
+    background: #008c6f !important;
+}
+
+body.blue-mode .close-modal {
+    color: #909090;
+}
+
+body.blue-mode .close-modal:hover {
+    color: #e0e0e0;
+}
+
+body.blue-mode .stats-item {
+    background: #0a0a1a;
+}
+
+body.blue-mode .stats-label {
+    color: #909090;
+}
+
+body.blue-mode .stats-value {
+    color: #4d88ff;
+}
+
+body.blue-mode h2 {
+    color: #e0e0e0;
+}
+
+body.blue-mode p {
+    color: #c0c0c0;
+}
+
+body.blue-mode p strong {
+    color: #e0e0e0;
+}
+
+body.blue-mode #movesCount {
+    color: #4d88ff;
+}
+
+body.blue-mode .about-footer {
+    color: #909090;
+}
+
+body.blue-mode .theme-option {
+    background: #12122d;
+    border-color: #00004d;
+}
+
+body.blue-mode .theme-option:hover {
+    border-color: #4d88ff;
+}
+
+body.blue-mode .theme-option.active {
+    border-color: #4d88ff;
+    background: #0a0a1a;
+}
+
+body.blue-mode .theme-option span {
+    color: #e0e0e0;
 }
 
 @media (max-width: 1200px) {

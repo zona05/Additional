@@ -15,30 +15,31 @@ class NumberGame {
     }
 
     loadTheme() {
-        const savedTheme = localStorage.getItem('additionalTheme');
-        if (savedTheme === 'dark') {
-            document.body.classList.add('dark-mode');
-            document.getElementById('themeBtn').textContent = '☀';
-            document.getElementById('themeBtn').title = 'Modo claro';
-        } else {
-            document.getElementById('themeBtn').textContent = '🌙';
-            document.getElementById('themeBtn').title = 'Modo oscuro';
-        }
+        const savedTheme = localStorage.getItem('additionalTheme') || 'light';
+        this.applyTheme(savedTheme);
     }
 
-    toggleTheme() {
-        document.body.classList.toggle('dark-mode');
-        const isDark = document.body.classList.contains('dark-mode');
+    applyTheme(theme) {
+        document.body.classList.remove('dark-mode', 'red-mode', 'green-mode', 'blue-mode');
         
-        if (isDark) {
-            localStorage.setItem('additionalTheme', 'dark');
-            document.getElementById('themeBtn').textContent = '☀';
-            document.getElementById('themeBtn').title = 'Modo claro';
-        } else {
-            localStorage.setItem('additionalTheme', 'light');
-            document.getElementById('themeBtn').textContent = '🌙';
-            document.getElementById('themeBtn').title = 'Modo oscuro';
+        if (theme !== 'light') {
+            document.body.classList.add(`${theme}-mode`);
         }
+        
+        localStorage.setItem('additionalTheme', theme);
+        this.updateThemeSelection(theme);
+    }
+
+    updateThemeSelection(theme) {
+        document.querySelectorAll('.theme-option').forEach(option => {
+            option.classList.toggle('active', option.dataset.theme === theme);
+        });
+    }
+
+    showThemeModal() {
+        const savedTheme = localStorage.getItem('additionalTheme') || 'light';
+        this.updateThemeSelection(savedTheme);
+        document.getElementById('themeModal').classList.add('show');
     }
 
     loadStats() {
@@ -292,7 +293,7 @@ class NumberGame {
     }
 
     attachEventListeners() {
-        document.getElementById('themeBtn').addEventListener('click', () => this.toggleTheme());
+        document.getElementById('themeBtn').addEventListener('click', () => this.showThemeModal());
         document.getElementById('undoBtn').addEventListener('click', () => this.undo());
         document.getElementById('giveUpBtn').addEventListener('click', () => this.showSolution());
         
@@ -348,6 +349,18 @@ class NumberGame {
         
         document.getElementById('closeAbout').addEventListener('click', () => {
             document.getElementById('aboutModal').classList.remove('show');
+        });
+        
+        document.getElementById('closeTheme').addEventListener('click', () => {
+            document.getElementById('themeModal').classList.remove('show');
+        });
+        
+        document.querySelectorAll('.theme-option').forEach(option => {
+            option.addEventListener('click', () => {
+                const theme = option.dataset.theme;
+                this.applyTheme(theme);
+                document.getElementById('themeModal').classList.remove('show');
+            });
         });
         
         document.getElementById('closeSolutionBanner').addEventListener('click', () => {

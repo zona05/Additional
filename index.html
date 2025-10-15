@@ -24,7 +24,7 @@
         </div>
         <div class="header-icons">
             <button class="icon-btn" id="giveUpBtn" title="Mostrar solución">🏳️</button>
-            <button class="icon-btn" id="themeBtn" title="Cambiar tema">☀</button>
+            <button class="icon-btn" id="themeBtn" title="Cambiar tema">🎨</button>
             <button class="icon-btn" id="statsBtn" title="Estadísticas">#</button>
             <button class="icon-btn" id="rulesBtn" title="Reglas">ℹ</button>
             <button class="icon-btn" id="aboutBtn" title="Acerca de">?</button>
@@ -115,6 +115,35 @@
             <div style="display: flex; gap: 10px; justify-content: center; margin-top: 20px;">
                 <button class="modal-btn" id="giveUpConfirmBtn" style="background: #ff6b6b;">Sí, rendirse</button>
                 <button class="modal-btn" id="giveUpCancelBtn" style="background: #00a383;">Seguir intentando</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal" id="themeModal">
+        <div class="modal-content">
+            <span class="close-modal" id="closeTheme">×</span>
+            <h2>Seleccionar Tema</h2>
+            <div class="theme-grid">
+                <button class="theme-option" data-theme="light">
+                    <div class="theme-preview light-preview"></div>
+                    <span>Claro</span>
+                </button>
+                <button class="theme-option" data-theme="dark">
+                    <div class="theme-preview dark-preview"></div>
+                    <span>Oscuro</span>
+                </button>
+                <button class="theme-option" data-theme="red">
+                    <div class="theme-preview red-preview"></div>
+                    <span>Rojo Oscuro</span>
+                </button>
+                <button class="theme-option" data-theme="green">
+                    <div class="theme-preview green-preview"></div>
+                    <span>Verde Oscuro</span>
+                </button>
+                <button class="theme-option" data-theme="blue">
+                    <div class="theme-preview blue-preview"></div>
+                    <span>Azul Oscuro</span>
+                </button>
             </div>
         </div>
     </div>
