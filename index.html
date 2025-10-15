@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JPNAELCDTDSO</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="header">
+        <div class="logo">
+            <span class="logo-word"><span class="initial">J</span><span class="rest">uego</span></span>
+            <span class="logo-word"><span class="initial">P</span><span class="rest">ara</span></span>
+            <span class="logo-word"><span class="initial">N</span><span class="rest">o</span></span>
+            <span class="logo-word"><span class="initial">A</span><span class="rest">burrirse</span></span>
+            <span class="logo-word"><span class="initial">E</span><span class="rest">n</span></span>
+            <span class="logo-word"><span class="initial">L</span><span class="rest">a</span></span>
+            <span class="logo-word"><span class="initial">C</span><span class="rest">lase</span></span>
+            <span class="logo-word"><span class="initial">D</span><span class="rest">e</span></span>
+            <span class="logo-word"><span class="initial">T</span><span class="rest">eoría</span></span>
+            <span class="logo-word"><span class="initial">D</span><span class="rest">e</span></span>
+            <span class="logo-word"><span class="initial">S</span><span class="rest">istemas</span></span>
+            <span class="logo-word"><span class="initial">O</span><span class="rest">perativos</span></span>
+        </div>
+        <div class="header-icons">
+            <button class="icon-btn" id="giveUpBtn" title="Mostrar solución">🏳️</button>
+            <button class="icon-btn" id="themeBtn" title="Cambiar tema">☀</button>
+            <button class="icon-btn" id="statsBtn" title="Estadísticas">#</button>
+            <button class="icon-btn" id="rulesBtn" title="Reglas">ℹ</button>
+            <button class="icon-btn" id="aboutBtn" title="Acerca de">?</button>
+        </div>
+    </div>
+
+    <div class="games-bar">
+        <div class="games-bar-content" id="gamesBar"></div>
+    </div>
+
+    <div class="main-container">
+        <div class="game-area">
+            <div class="target-section">
+                <div class="target-number" id="targetNumber">0</div>
+            </div>
+
+            <div class="numbers-grid" id="numbersGrid"></div>
+
+            <div class="operations-grid">
+                <button class="operation-btn undo-btn-op" id="undoBtn" disabled title="Deshacer">↶</button>
+                <button class="operation-btn" data-op="+" disabled>+</button>
+                <button class="operation-btn" data-op="-" disabled>−</button>
+                <button class="operation-btn" data-op="*" disabled>×</button>
+                <button class="operation-btn" data-op="/" disabled>÷</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="solution-banner" id="solutionBanner">
+        <div class="solution-banner-header">
+            <h3>Solución del Puzzle</h3>
+            <button class="solution-close" id="closeSolutionBanner">×</button>
+        </div>
+        <div class="solution-banner-content" id="solutionSteps"></div>
+    </div>
+
+    <div class="modal" id="victoryModal">
+        <div class="modal-content">
+            <h2>¡Felicidades!</h2>
+            <p>¡Has completado este puzzle!</p>
+            <p><strong>Movimientos:</strong> <span id="movesCount">0</span></p>
+            <button class="modal-btn" id="continueBtn">Continuar</button>
+        </div>
+    </div>
+
+    <div class="modal" id="statsModal">
+        <div class="modal-content">
+            <span class="close-modal" id="closeStats">×</span>
+            <h2>Estadísticas</h2>
+            <div class="stats-item">
+                <div class="stats-label">Puzzles completados</div>
+                <div class="stats-value" id="completedCount">0</div>
+            </div>
+            <div class="stats-item">
+                <div class="stats-label">Movimientos totales</div>
+                <div class="stats-value" id="totalMoves">0</div>
+            </div>
+            <div class="stats-item">
+                <div class="stats-label">Promedio de movimientos</div>
+                <div class="stats-value" id="avgMoves">0</div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal" id="rulesModal">
+        <div class="modal-content">
+            <span class="close-modal" id="closeRules">×</span>
+            <h2>Cómo Jugar</h2>
+            <p><strong>Objetivo:</strong> Alcanzar el número objetivo utilizando los 6 números disponibles.</p>
+            <p>Blah blah blah, ya sabes cómo jugar, ¿no?</p>
+        </div>
+    </div>
+
+    <div class="modal" id="aboutModal">
+        <div class="modal-content">
+            <span class="close-modal" id="closeAbout">×</span>
+            <h2>Acerca de esta cosa</h2>
+            <p>Esto es un juego para no aburrirnos en clase.</p>
+            <p style="margin-top: 20px;"><strong>Creado por:</strong> Zona</p>
+            <p class="about-footer" style="margin-top: 20px; font-size: 0.9em;">© 2025 Zona.</p>
+        </div>
+    </div>
+
+    <div class="modal" id="giveUpModal">
+        <div class="modal-content">
+            <h2 id="giveUpTitle">¿Rendirse?</h2>
+            <p id="giveUpMessage">¿Estás seguro de que quieres ver la solución?</p>
+            <div style="display: flex; gap: 10px; justify-content: center; margin-top: 20px;">
+                <button class="modal-btn" id="giveUpConfirmBtn" style="background: #ff6b6b;">Sí, rendirse</button>
+                <button class="modal-btn" id="giveUpCancelBtn" style="background: #00a383;">Seguir intentando</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="game.js"></script>
+</body>
+</html>
