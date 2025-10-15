@@ -661,10 +661,14 @@ body.dark-mode .about-footer {
 }
 
 @media (max-width: 1200px) {
-    .main-container {
-        grid-template-columns: 1fr;
+    .header {
+        padding: 15px 20px;
     }
-    
+
+    .logo {
+        font-size: 1em;
+    }
+
     .numbers-grid {
         grid-template-columns: repeat(3, 120px);
         grid-template-rows: repeat(2, 120px);
@@ -675,5 +679,306 @@ body.dark-mode .about-footer {
         width: 120px;
         height: 120px;
         font-size: 2em;
+    }
+
+    .target-number {
+        font-size: 5em;
+    }
+}
+
+@media (max-width: 768px) {
+    .header {
+        padding: 12px 15px;
+        flex-direction: row;
+        gap: 10px;
+    }
+
+    .logo {
+        font-size: 0.9em;
+        gap: 1px;
+    }
+
+    .logo-word .rest {
+        display: none;
+    }
+
+    .header-icons {
+        gap: 8px;
+    }
+
+    .icon-btn {
+        width: 32px;
+        height: 32px;
+        font-size: 1em;
+    }
+
+    .games-bar-content {
+        padding: 0 10px;
+        gap: 8px;
+    }
+
+    .game-tab {
+        min-width: 80px;
+        padding: 10px 15px;
+    }
+
+    .game-number {
+        font-size: 1em;
+    }
+
+    .game-stars {
+        font-size: 0.75em;
+    }
+
+    .main-container {
+        padding: 30px 15px;
+    }
+
+    .target-section {
+        margin-bottom: 40px;
+    }
+
+    .target-number {
+        font-size: 4em;
+    }
+
+    .numbers-grid {
+        grid-template-columns: repeat(3, 100px);
+        grid-template-rows: repeat(2, 100px);
+        gap: 15px;
+        margin-bottom: 30px;
+    }
+
+    .number-btn {
+        width: 100px;
+        height: 100px;
+        font-size: 2em;
+    }
+
+    .operations-grid {
+        grid-template-columns: repeat(5, 1fr);
+        gap: 10px;
+        max-width: 100%;
+        width: 100%;
+    }
+
+    .operation-btn {
+        padding: 15px 10px;
+        font-size: 1.5em;
+        min-width: 50px;
+    }
+
+    .operation-btn.undo-btn-op {
+        font-size: 1.3em;
+    }
+
+    .solution-banner {
+        width: 90%;
+        right: -100%;
+        border-radius: 12px;
+        top: auto;
+        bottom: 0;
+        transform: none;
+        max-height: 70vh;
+    }
+
+    .solution-banner.show {
+        right: 5%;
+    }
+
+    .modal-content {
+        padding: 32px 24px;
+        max-width: 90%;
+        margin: 0 15px;
+    }
+
+    .modal-content h2 {
+        font-size: 1.5em;
+    }
+
+    .modal-content p {
+        font-size: 0.95em;
+    }
+
+    .modal-btn {
+        padding: 12px 24px;
+        font-size: 0.95em;
+    }
+}
+
+@media (max-width: 480px) {
+    .header {
+        padding: 10px 12px;
+    }
+
+    .logo {
+        font-size: 0.8em;
+    }
+
+    .header-icons {
+        gap: 6px;
+    }
+
+    .icon-btn {
+        width: 28px;
+        height: 28px;
+        font-size: 0.9em;
+    }
+
+    .games-bar {
+        padding: 10px 0;
+    }
+
+    .games-bar-content {
+        gap: 6px;
+    }
+
+    .game-tab {
+        min-width: 70px;
+        padding: 8px 12px;
+    }
+
+    .game-number {
+        font-size: 0.95em;
+    }
+
+    .main-container {
+        padding: 20px 10px;
+    }
+
+    .target-section {
+        margin-bottom: 30px;
+    }
+
+    .target-number {
+        font-size: 3em;
+        letter-spacing: -2px;
+    }
+
+    .numbers-grid {
+        grid-template-columns: repeat(3, 80px);
+        grid-template-rows: repeat(2, 80px);
+        gap: 12px;
+        margin-bottom: 25px;
+    }
+
+    .number-btn {
+        width: 80px;
+        height: 80px;
+        font-size: 1.6em;
+    }
+
+    .operations-grid {
+        gap: 8px;
+    }
+
+    .operation-btn {
+        padding: 12px 8px;
+        font-size: 1.3em;
+        min-width: 45px;
+    }
+
+    .operation-btn.undo-btn-op {
+        font-size: 1.1em;
+    }
+
+    .solution-banner {
+        width: 95%;
+        right: -100%;
+    }
+
+    .solution-banner.show {
+        right: 2.5%;
+    }
+
+    .solution-banner-header {
+        padding: 12px 15px;
+    }
+
+    .solution-banner-header h3 {
+        font-size: 0.95em;
+    }
+
+    .solution-banner-content {
+        padding: 15px;
+    }
+
+    .solution-step {
+        padding: 10px;
+        font-size: 0.9em;
+    }
+
+    .modal-content {
+        padding: 24px 20px;
+        border-radius: 16px;
+    }
+
+    .modal-content h2 {
+        font-size: 1.3em;
+        margin-bottom: 16px;
+    }
+
+    .modal-content p {
+        font-size: 0.9em;
+        margin-bottom: 12px;
+    }
+
+    .modal-btn {
+        padding: 10px 20px;
+        font-size: 0.9em;
+        width: 100%;
+    }
+
+    .stats-item {
+        padding: 12px;
+    }
+
+    .stats-label {
+        font-size: 0.8em;
+    }
+
+    .stats-value {
+        font-size: 1.3em;
+    }
+
+    #giveUpModal .modal-content > div {
+        flex-direction: column;
+        gap: 8px !important;
+    }
+
+    #giveUpModal .modal-btn {
+        width: 100%;
+    }
+}
+
+@media (max-width: 360px) {
+    .logo {
+        font-size: 0.7em;
+    }
+
+    .target-number {
+        font-size: 2.5em;
+    }
+
+    .numbers-grid {
+        grid-template-columns: repeat(3, 70px);
+        grid-template-rows: repeat(2, 70px);
+        gap: 10px;
+    }
+
+    .number-btn {
+        width: 70px;
+        height: 70px;
+        font-size: 1.4em;
+    }
+
+    .operation-btn {
+        font-size: 1.2em;
+        padding: 10px 6px;
+        min-width: 40px;
+    }
+
+    .operation-btn.undo-btn-op {
+        font-size: 1em;
     }
 }
